@@ -10,8 +10,20 @@ var randomNumber = function(min , max){
     return value;
 }
 
+var getPlayerName = function(){
+    var name = "";
+
+    // ADD LOOP HERE WITH PROMPT AND CONDITION
+    while (name === "" || name === null){
+        name = window.prompt("What is your robot's name?")
+    }
+
+    console.log("Your robot's name is " + name + ".");
+    return name;
+}
+
 var playerInfo = {
-    name: window.prompt("What is the name of your robot?"),
+    name: getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
